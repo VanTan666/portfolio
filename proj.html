@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>VanTan - Projects</title>
+    <link rel="stylesheet" href="proj.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VanTan</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="proj.html">Projects</a>
+      </nav>
+    </header>
+    <main>
+      <h1>My Projects</h1>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h2>Portfolio Website</h2>
+          <p>A personal portfolio website showcasing my projects and skills, featuring a unique shimmering code background.</p>
+          <div class="technologies">
+            <span class="technology">HTML5</span>
+            <span class="technology">CSS3</span>
+            <span class="technology">JavaScript</span>
+            <span class="technology">Responsive Design</span>
+          </div>
+          <div class="links">
+            <a href="index.html">View Project</a>
+            <a href="https://github.com/VanTan666/portfolio">GitHub</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="code-background" id="codeBackground"></div>
+
+  <script>
+    const codeLines = [
+      "function createProject(name, technologies) {",
+      "  return { name, technologies };",
+      "}",
+      "const projects = [",
+      "  createProject('E-commerce Platform', ['React', 'Node.js', 'MongoDB'])",
+      "  createProject('Weather Dashboard', ['Vue.js', 'Express', 'D3.js'])",
+      "  createProject('Task Management App', ['Angular', 'Firebase', 'Socket.io'])",
+      "  createProject('Portfolio Website', ['HTML5', 'CSS3', 'JavaScript'])",
+      "  createProject('AI Content Generator', ['Python', 'TensorFlow', 'Flask'])",
+      "  createProject('Blockchain Voting', ['Solidity', 'Ethereum', 'Web3.js'])",
+      "];",
+      "projects.forEach(project => showcase(project));",
+      "function innovate() {",
+      "  const newIdea = brainstorm();",
+      "  const prototype = buildMVP(newIdea);",
+      "  return launchProject(prototype);",
+      "}",
+      "// TODO: Add more groundbreaking projects"
+    ];
+
+    function createCodeBackground() {
+      const codeBackground = document.getElementById('codeBackground');
+      const numberOfLines = 50;
+
+      for (let i = 0; i < numberOfLines; i++) {
+        const codeLine = document.createElement('div');
+        codeLine.classList.add('code-line');
+        codeLine.style.left = `${Math.random() * 100}%`;
+        codeLine.style.animationDelay = `${Math.random() * 20}s`;
+        codeLine.textContent = codeLines[Math.floor(Math.random() * codeLines.length)];
+        codeBackground.appendChild(codeLine);
+      }
+    }
+
+    createCodeBackground();
+  </script>
+</body></html>

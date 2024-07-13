@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>VanTan - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">VanTan</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="proj.html">Projects</a>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm VanTan, a passionate web developer creating stunning and functional websites. With a keen eye for design and a love for clean code, I bring ideas to life in the digital realm.</p>
+        <div class="skills-section">
+          <h2>My Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon">📱</div>
+              <div>Responsive Design</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">🖥️</div>
+              <div>Front-end Development</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">⚙️</div>
+              <div>Back-end Development</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">🎨</div>
+              <div>UI/UX Design</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">🚀</div>
+              <div>Performance Optimization</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">🔒</div>
+              <div>Web Security</div>
+            </div>
+          </div>
+        </div>
+        <a href="https://vantan-portfolio.websim/projects" class="cta-button">View My Projects</a>
+      </div>
+    </main>
+  </div>
+  <div class="code-background" id="codeBackground"></div>
+
+  <script>
+    const codeLines = [
+      "const portfolio = new Portfolio('VanTan');",
+      "portfolio.addSkill('HTML');",
+      "portfolio.addSkill('CSS');",
+      "portfolio.addSkill('JavaScript');",
+      "portfolio.addSkill('React');",
+      "portfolio.addSkill('Node.js');",
+      "portfolio.addSkill('MongoDB');",
+      "portfolio.addProject('E-commerce Site');",
+      "portfolio.addProject('Portfolio Website');",
+      "portfolio.addProject('Weather App');",
+      "function createAwesomeWebsite() {",
+      "  const idea = getInspiration();",
+      "  const design = createBeautifulDesign(idea);",
+      "  const code = writeCleanCode(design);",
+      "  return launchWebsite(code);",
+      "}",
+      "// TODO: Add more amazing projects",
+      "portfolio.showcase();",
+    ];
+
+    function createCodeBackground() {
+      const codeBackground = document.getElementById('codeBackground');
+      const numberOfLines = 50;
+
+      for (let i = 0; i < numberOfLines; i++) {
+        const codeLine = document.createElement('div');
+        codeLine.classList.add('code-line');
+        codeLine.style.left = `${Math.random() * 100}%`;
+        codeLine.style.animationDelay = `${Math.random() * 20}s`;
+        codeLine.textContent = codeLines[Math.floor(Math.random() * codeLines.length)];
+        codeBackground.appendChild(codeLine);
+      }
+    }
+
+    createCodeBackground();
+  </script>
+</body></html>
